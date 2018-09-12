@@ -1237,8 +1237,8 @@ URLS = flatten((
     url_test('/teach/smarton/{tracking,security,surveillance}/', '/internet-health/privacy-security/'),
 
     # Issue #5949
-    url_test('/foundation/trademarks/', '/policy/'),
-    url_test('/foundation/trademarks/faq/', '/policy/'),
+    url_test('/foundation/trademarks/', '/foundation/trademarks/policy/'),
+    url_test('/foundation/trademarks/faq/', '/foundation/trademarks/policy/'),
     url_test('/foundation/documents/domain-name-license.pdf', '/foundation/trademarks/policy/'),
     url_test('/about/partnerships/distribution/', '/foundation/trademarks/distribution-policy/'),
     url_test('/foundation/trademarks/poweredby/faq/', '/foundation/trademarks/policy/'),

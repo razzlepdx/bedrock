@@ -19,7 +19,7 @@
   <p>{% trans report=url('legal.fraud-report') %}If you want to report a misuse of a Mozilla trademark, contact us here:<br>
   <a href="{{ report }}">https://www.mozilla.org/about/legal/fraud-report/</a>{% endtrans %}</p>
 
-  <h3>{{ _('When do I need specific permission to use a Mozilla trademark?') }}</h3>
+  <h2>{{ _('When do I need specific permission to use a Mozilla trademark?') }}</h2>
 
   <p>{{ _('You may do the following <em>without</em> receiving specific permission from Mozilla (or its affiliates):') }}</p>
 
@@ -35,9 +35,11 @@
 
   </ul>
 
-  <p>{% trans trademarks="mailto:trademark-permissions@mozilla.com" %}<strong>All other uses of a Mozilla trademark require our prior written permission.</strong> This includes, without limiting the generality of the above, any use of a Mozilla trademark in a domain name. Contact us at <a href="{{ trademarks }}">trademark-permissions@mozilla.com</a>. for more information.{% endtrans %}</p>
+  <p>{% trans trademarks="mailto:trademark-permissions@mozilla.com" %}<strong>All other uses of a Mozilla trademark require our prior written permission.</strong> This includes, without limiting the generality of the above, any use of a Mozilla trademark in a domain name. Contact us at <a href="{{ trademarks }}">trademark-permissions@mozilla.com</a> for more information.{% endtrans %}</p>
 
-  <h3>{{ _('When allowed, how should I use a Mozilla trademark? The General Guidelines') }}</h3>
+  <h2>{{ _('When allowed, how should I use a Mozilla trademark?') }}</h2>
+
+  <h3>{{ _('General Guidelines') }}</h3>
 
   <h4>{{ _('Do:') }}</h4>
 
@@ -49,7 +51,7 @@
       {% trans list=url('foundation.trademarks.list') %}Use the Mozilla trademark exactly as shown in the <a href="{{ list }}">Trademarks List</a>.{% endtrans %}
       <ul>
         <li>{{ _('Don’t abbreviate a Mozilla wordmark or combine it with other words.') }}</li>
-        <li>{{ _('Don’t alter a Mozilla logos design or combine it with other images.') }}</li>
+        <li>{{ _('Don’t alter a Mozilla logo design or combine it with other images.') }}</li>
       </ul>
     </li>
 
@@ -95,9 +97,9 @@ or other commercial use.') }}</li>
 
   </ul>
 
-  <h2>{{ _('Additional Guidelines') }}</h2>
+  <h3>{{ _('Additional Guidelines') }}</h3>
 
-  <h3>{{ _('Mozilla Logo and Firefox Logo Guidelines') }}</h3>
+  <h4>{{ _('Mozilla Logo and Firefox Logo Guidelines') }}</h4>
 
   <p>{{ _('In addition to the General Guidelines above, the Mozilla Style Guide has detailed information on proper usage of the Mozilla logo and the Firefox logo. See the respective pages for more information:') }}</p>
 
@@ -105,7 +107,7 @@ or other commercial use.') }}</li>
 
   <p>{% trans firefox=("https://design.firefox.com/photon/visuals/product-identity-assets.html")%}Firefox Logo: <a href="{{ firefox }}">https://design.firefox.com/photon/visuals/product-identity-assets.html</a>{% endtrans %}</p>
 
-  <h3 id="firefox-add-on">{{ _('Firefox Add-on Guidelines') }}</h3>
+  <h4 id="firefox-add-on">{{ _('Firefox Add-on Guidelines') }}</h4>
 
   <p>{% trans %}In addition to the General Guidelines above, your add-on developer name and everything about your add-on (including the add-on name, icon, description, graphics and screenshots) must be unique and free of Mozilla trademarks unless (1) you’ve received prior written permission from Mozilla or (2) you’re only using a Mozilla wordmark to describe that your add-on works with Firefox and as long as your add-on icon and/or name:{% endtrans %}</p>
 
@@ -115,21 +117,24 @@ or other commercial use.') }}</li>
 
   <li>{{ _(' Denotes your own unique identity so as to clearly signal to users that there is no affiliation with or endorsement by Mozilla.') }}</li>
 
+  {% if l10n_has_tag('trademarks-policy-0918') %}
+  <li>{{ _(' For example, you cannot name your Add-on “Firefox NewGadget Extension”.  However, it would be acceptable to name your Add-on "NewGadget Extension for Firefox”.') }}</li>
+  {% endif %}
   </ul>
 
-  <h3 id="social-media">{{ _('Social Media Guidelines') }}</h3>
+  <h4 id="social-media">{{ _('Social Media Guidelines') }}</h4>
 
-  <p>{% trans %}In addition to the General Guidelines above, the name and handle of your social media account and any and all pages or communities cannot begin with a Mozilla trademark. In addition, Mozilla logos cannot be used in a way that might suggest affiliation with Mozilla, including, but not limited to, the account, profile, or header images. The only exception to these requirements is if you’ve received prior written permission from Mozilla.{% endtrans %}</p>
+  <p>{% trans %}In addition to the General Guidelines above, the name and handle of your social media account and any and all pages cannot begin with a Mozilla trademark. In addition, Mozilla logos cannot be used in a way that might suggest affiliation with Mozilla, including, but not limited to, the account, profile, or header images. The only exception to these requirements is if you’ve received prior permission from Mozilla.{% endtrans %}</p>
 
-  <p>{% trans %}For example, you cannot name your account, page, or community “Firefox Community” or “Mozilla Software.” However, it would be acceptable to name your account, page, or community “Fans of Firefox” or “Information about Mozilla Software” as long as you do not use the Firefox or Mozilla logos or otherwise suggest any affiliation with Mozilla.{% endtrans %}</p>
+  <p>{% trans %}For example, you cannot name your account, page, or community “Firefox Representatives” or “Mozilla Software.” However, it would be acceptable to name your account, page, or community “Fans of Firefox” or “Information about Mozilla Software” as long as you do not use the Firefox or Mozilla logos or otherwise suggest any affiliation with Mozilla.{% endtrans %}</p>
 
-  <h3>{{ _('Firefox Distribution Guidelines') }}</h3>
+  <h4>{{ _('Firefox Distribution Guidelines') }}</h4>
 
-  <p>{% trans guidelines = url('foundation.trademarks.distribution-policy') %}<a href="{{ guidelines }}">Click here</a> for additional guidelines that apply to distribution of Mozilla Firefox.{% endtrans %}</p>
+  <p>{% trans guidelines = url('foundation.trademarks.distribution-policy') %}<a href="{{ guidelines }}">Click here</a> for additional guidelines that apply to distribution of the Firefox Browser.{% endtrans %}</p>
 
-  <h3>{{ _('Mozilla Community Guidelines') }}</h3>
+  <h4>{{ _('Mozilla Community Guidelines') }}</h4>
 
-  <p>{% trans discourse=("https://discourse.mozilla.org/") %}Various permissions to use Mozilla Trademarks have been provided to various members of the Mozilla Community, and these Mozilla Trademark Guidelines do not alter any such previously granted permissions. If you are a Mozilla Community member with a question, please check <a href="{{ discourse }}">https://discourse.mozilla.org/</a>.{% endtrans %}</p>
+  <p>{% trans discourse=("https://discourse.mozilla.org/") %}Various permissions to use Mozilla Trademarks have been provided to various members of the Mozilla Community, and these Mozilla Trademark Guidelines do not alter any such previously granted permissions.{% endtrans %}</p>
 
   <h3>{{ _('Questions') }}</h3>
 
