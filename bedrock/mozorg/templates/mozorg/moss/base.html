@@ -24,7 +24,11 @@
 
 {% block site_header %}
 {% if LANG.startswith('en-') %}
-  {% include 'includes/global-nav.html' %}
+  {% if switch('navigation_protocol') %}
+    {% include 'includes/protocol/navigation.html' %}
+  {% else %}
+    {% include 'includes/global-nav.html' %}
+  {% endif %}
   <header class="section masthead">
 {% else %}
 <header class="section masthead" id="masthead">
@@ -50,7 +54,7 @@
   </div>
 {% endif %}
   <div id="header-image">{% block header_image %}{% endblock %}</div>
-  
+
   <div class="content" id="page-heading">
     <h1>{% block page_heading %}{% endblock %}</h1>
   </div>
