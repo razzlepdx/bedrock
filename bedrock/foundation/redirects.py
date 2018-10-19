@@ -8,4 +8,5 @@ redirectpatterns = (
     redirect(r'^about/partnerships/distribution/$', '/foundation/trademarks/distribution-policy/'),
     redirect(r'^foundation/trademarks/poweredby/faq/$', '/foundation/trademarks/policy/'),
     redirect(r'^foundation/trademarks/l10n-website-policy/$', '/foundation/trademarks/policy/')
+    redirect(r'^about/policy/leandata/$', '/about/policy/lean-data/'),
 )
